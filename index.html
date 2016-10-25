@@ -2,691 +2,854 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="google-site-verification" content="7FW8tFciCo03Fuos9otZBpVRbms3eZid4SL1ijn8NXg" />
-    <title>enpls: Ensemble Partial Least Squares Regression</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-    <!-- Animation Libraries -->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css">
-    <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:100,300,400,700,900%7COpen+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Lobster:400" rel="stylesheet" type="text/css">
-    <!-- Fonts Icons -->
-    <link rel="stylesheet" href="css/custom-icons.css">
-    <link rel="stylesheet" href="css/et-line-icons.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- Nivo Lightbox -->
-    <link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox.css">
-    <link rel="stylesheet" href="css/nivo-lightbox/lightbox-theme.css">
-    <!-- Animated Headlines -->
-    <link rel="stylesheet" href="css/animated-hedlines.css">
-    <!-- Main Styles -->
-    <link href="css/styles.css" rel="stylesheet">
-    <!-- Theme -->
-    <link href="css/theme/orange.css" rel="stylesheet" data-color="" id="theme">
-    <!-- Animsition -->
-    <link href="css/animsition.min.css" rel="stylesheet">
-    <meta name="application-name" content="&nbsp;" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="google-site-verification" content="7FW8tFciCo03Fuos9otZBpVRbms3eZid4SL1ijn8NXg" />
+	<title>enpls: Ensemble Partial Least Squares Regression</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- Animation Libraries -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css">
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:100,300,400,700,900%7COpen+Sans:300,400,600,700' rel='stylesheet'
+		type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Lobster:400" rel="stylesheet" type="text/css">
+	<!-- Fonts Icons -->
+	<link rel="stylesheet" href="css/custom-icons.css">
+	<link rel="stylesheet" href="css/et-line-icons.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<!-- Nivo Lightbox -->
+	<link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo-lightbox/lightbox-theme.css">
+	<!-- Animated Headlines -->
+	<link rel="stylesheet" href="css/animated-hedlines.css">
+	<!-- Main Styles -->
+	<link href="css/styles.css" rel="stylesheet">
+	<!-- Theme -->
+	<link href="css/theme/orange.css" rel="stylesheet" data-color="" id="theme">
+	<!-- Animsition -->
+	<link href="css/animsition.min.css" rel="stylesheet">
+	<meta name="application-name" content="&nbsp;" />
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
 </head>
 
 <body>
-    <!-- Page Wrapper -->
-    <div id="page" class="animsition" data-loader-type="loader2" data-page-loader-text="enpls" data-animsition-in="zoom-outy" data-animsition-out="fade-out-up-sm" style="transform-origin: 50% 50vh;">
-        <div id="top"></div>
-        <!-- Home Section -->
-        <section id="home-section" class="home-section overlay full-screen">
-            <div class="parallax-hero full-screen overlay home-bg" data-top="transform: translate3d(0px, 0px, 0px)" data-top-bottom="transform: translate3d(0px, -200px, 0px)" data-anchor-target="#home-section">
-            </div>
-            <div class="hs-content">
-                <div class="hs-content-inner">
-                    <div class="margin-bottom-10 init-animation-5 delay0-8s">
-                        <h2 class="hs-text-6">Ensemble Partial Least Squares Regressions</h2>
-                    </div>
-                    <div class="margin-bottom-30 init-animation-2 delay0-2s">
-                        <h1 class="hs-text-10 uppercase padding-top-40 font-third">
-                            <p style="text-transform:lowercase">&nbsp;enpls&nbsp;
-                                <p>
-                        </h1>
-                    </div>
-                    <div class="inline-block margin-top-10 padding-top-10 padding-left-sm-10 ">
-                        <a href="https://cran.r-project.org/package=enpls" class="btn btn-animated btn-split btn-transparent-white ripple-alone" data-text="View on CRAN"><span>Stable Version</span></a>
-                    </div>
-                    <div class="inline-block margin-top-10 padding-top-10 padding-left-sm-10">
-                        <a href="https://github.com/road2stat/enpls" class="btn btn-animated btn-split btn-transparent-white ripple-alone" data-text="View on GitHub"><span>Dev Version</span></a>
-                    </div>
-                    <div class="inline-block margin-top-10 padding-top-10 padding-left-sm-10">
-                        <a href="doc/" class="btn btn-animated btn-split btn-transparent-white ripple-alone" data-text="Documentation"><span>Pkg Vignette</span></a>
-                    </div>
+	<!-- Page Wrapper -->
+	<div id="page" class="animsition" data-loader-type="loader2" data-page-loader-text="enpls" data-animsition-in="zoom-outy"
+		data-animsition-out="fade-out-up-sm" style="transform-origin: 50% 50vh;">
+		<div id="top"></div>
+		<!-- Home Section -->
+		<section id="home-section" class="home-section overlay full-screen">
+			<div class="parallax-hero full-screen overlay home-bg" data-top="transform: translate3d(0px, 0px, 0px)" data-top-bottom="transform: translate3d(0px, -200px, 0px)"
+				data-anchor-target="#home-section">
+			</div>
+			<div class="hs-content">
+				<div class="hs-content-inner">
+					<div class="margin-bottom-10 init-animation-5 delay0-8s">
+						<h2 class="hs-text-6">Ensemble Partial Least Squares Regressions</h2>
+					</div>
+					<div class="margin-bottom-30 init-animation-2 delay0-2s">
+						<h1 class="hs-text-10 uppercase padding-top-40 font-third">
+							<p style="text-transform:lowercase">&nbsp;enpls&nbsp;
+								<p>
+						</h1>
+					</div>
+					<div class="inline-block margin-top-10 padding-top-10 padding-left-sm-10 ">
+						<a href="https://cran.r-project.org/package=enpls" class="btn btn-animated btn-split btn-transparent-white ripple-alone"
+							data-text="View on CRAN"><span>Stable Version</span></a>
+					</div>
+					<div class="inline-block margin-top-10 padding-top-10 padding-left-sm-10">
+						<a href="https://github.com/road2stat/enpls" class="btn btn-animated btn-split btn-transparent-white ripple-alone" data-text="View on GitHub"><span>Dev Version</span></a>
+					</div>
+					<div class="inline-block margin-top-10 padding-top-10 padding-left-sm-10">
+						<a href="doc/" class="btn btn-animated btn-split btn-transparent-white ripple-alone" data-text="Documentation"><span>Pkg Vignette</span></a>
+					</div>
 
-                </div>
-                <span class="scroll-down-arrow in-page-scroll" data-start="display: inline-block" data-100-start="display: none">
+				</div>
+				<span class="scroll-down-arrow in-page-scroll" data-start="display: inline-block" data-100-start="display: none">
                     <a href="#process-section" class="ci-icon-uniE930 init-animation-2 delay1-8s"></a>
                 </span>
-            </div>
-        </section>
-        <!--/ End Home Section -->
-        <!-- Navbar -->
-        <div class="position-relative">
-            <div id="nav-wrapper" class="transp-nav">
-                <nav id="nav" class="navbar navbar-transparent navbar-fixed-top navbar-default ripple-group-parent init-animation-5" role="navigation">
-                    <!-- progressbar -->
-                    <div id="scroll-progressbar" class="scroll-progressbar">
-                        <div>
-                            <span class="scroll-shadow"></span>
-                        </div>
-                    </div>
-                    <div class="container in-page-scroll">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" id="animated-navicon" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-navbar-collapse">
+			</div>
+		</section>
+		<!--/ End Home Section -->
+		<!-- Navbar -->
+		<div class="position-relative">
+			<div id="nav-wrapper" class="transp-nav">
+				<nav id="nav" class="navbar navbar-transparent navbar-fixed-top navbar-default ripple-group-parent init-animation-5" role="navigation">
+					<!-- progressbar -->
+					<div id="scroll-progressbar" class="scroll-progressbar">
+						<div>
+							<span class="scroll-shadow"></span>
+						</div>
+					</div>
+					<div class="container in-page-scroll">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" id="animated-navicon" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                            <a class="navbar-brand ripple-group" href="#top">
-                                <p class="pull-left font-second">enpls</p>
-                            </a>
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
-                            <ul class="nav navbar-nav navbar-right cl-effect-5">
-                                <li>
-                                    <a class="ripple-group" href="#top">
-                                        <span data-hover="Home">Home</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ripple-group" href="#process-section">
-                                        <span data-hover="Workflow">Workflow</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ripple-group" href="#fs-section">
-                                        <span data-hover="Feature&nbsp;Importance">Feature Importance</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ripple-group" href="#od-section">
-                                        <span data-hover="Outlier&nbsp;Detection">Outlier Detection</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ripple-group" href="#modeling-section">
-                                        <span data-hover="Ensemble&nbsp;Modeling">Ensemble Modeling</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ripple-group" href="#about-section">
-                                        <span data-hover="About">About</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.navbar-collapse -->
-                    </div>
-                    <!-- /.container -->
-                </nav>
-            </div>
-        </div>
-        <!--/ End Navbar -->
-        <div id="page-2">
+							<a class="navbar-brand ripple-group" href="#top">
+								<p class="pull-left font-second">enpls</p>
+							</a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="mobile-navbar-collapse">
+							<ul class="nav navbar-nav navbar-right cl-effect-5">
+								<li>
+									<a class="ripple-group" href="#top">
+										<span data-hover="Home">Home</span>
+									</a>
+								</li>
+								<li>
+									<a class="ripple-group" href="#process-section">
+										<span data-hover="Workflow">Workflow</span>
+									</a>
+								</li>
+								<li>
+									<a class="ripple-group" href="#fs-section">
+										<span data-hover="Feature&nbsp;Importance">Feature Importance</span>
+									</a>
+								</li>
+								<li>
+									<a class="ripple-group" href="#od-section">
+										<span data-hover="Outlier&nbsp;Detection">Outlier Detection</span>
+									</a>
+								</li>
+								<li>
+									<a class="ripple-group" href="#appdomain-section">
+										<span data-hover="Applicability&nbsp;Domain">Applicability Domain</span>
+									</a>
+								</li>
+								<li>
+									<a class="ripple-group" href="#modeling-section">
+										<span data-hover="Predictive&nbsp;Modeling">Predictive Modeling</span>
+									</a>
+								</li>
+								<li>
+									<a class="ripple-group" href="#about-section">
+										<span data-hover="About">About</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /.navbar-collapse -->
+					</div>
+					<!-- /.container -->
+				</nav>
+			</div>
+		</div>
+		<!--/ End Navbar -->
+		<div id="page-2">
 
-            <!-- Process Section -->
-            <section id="process-section" class="process-section section">
-                <div class="container">
-                    <div class="section-title">
-                        <div class=" section-title-more">
-                            Click icons to see details
-                        </div>
-                        <div>
-                            <h1 class="section-title-heading"><span>Workflow Supported</span>
-                                <p style="text-transform:lowercase">in enpls</p>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="position-relative padding-bottom-40 padding-top-100 padding-top-sm-120">
-                        <!-- process headers -->
-                        <ul class="process-labels font-second">
-                            <!-- change [data-active] and list item to a same value -->
-                            <li data-que="1" class="process-label-active wow fadeInDown" data-wow-offset="100" data-wow-delay="0s">
-                                <i class="icon-hourglass">
+			<!-- Process Section -->
+			<section id="process-section" class="process-section section">
+				<div class="container">
+					<div class="section-title">
+						<div class=" section-title-more">
+							Click icons to see details
+						</div>
+						<div>
+							<h1 class="section-title-heading"><span>Workflow Supported</span>
+								<p style="text-transform:lowercase">in enpls</p>
+							</h1>
+						</div>
+					</div>
+					<div class="position-relative padding-bottom-40 padding-top-100 padding-top-sm-120">
+						<!-- process headers -->
+						<ul class="process-labels font-second">
+							<!-- change [data-active] and list item to a same value -->
+							<li data-que="1" class="process-label-active wow fadeInDown" data-wow-offset="100" data-wow-delay="0s">
+								<i class="icon-hourglass">
                                 <i class="icon-hourglass icon-shade"></i>
-                                </i>
-                                <span data-active="Feature&nbsp;Importance"> Feature&nbsp;Importance</span>
-                            </li>
-                            <li data-que="2" class=" wow fadeInDown" data-wow-offset="100" data-wow-delay=".15s">
-                                <i class="icon-telescope">
+								</i>
+								<span data-active="Feature&nbsp;Importance"> Feature&nbsp;Importance</span>
+							</li>
+							<li data-que="2" class=" wow fadeInDown" data-wow-offset="100" data-wow-delay=".15s">
+								<i class="icon-telescope">
                                 <i class="icon-telescope icon-shade"></i>
-                                </i>
-                                <span data-active="Outlier&nbsp;Detection"> Outlier&nbsp;Detection</span>
-                            </li>
-                            <li data-que="3" class=" wow fadeInDown" data-wow-offset="100" data-wow-delay=".3s">
-                                <i class="icon-layers">
+								</i>
+								<span data-active="Outlier&nbsp;Detection"> Outlier&nbsp;Detection</span>
+							</li>
+							<li data-que="3" class=" wow fadeInDown" data-wow-offset="100" data-wow-delay=".3s">
+								<i class="icon-layers">
                                 <i class="icon-layers icon-shade"></i>
-                                </i>
-                                <span data-active="Ensemble&nbsp;Modeling"> Ensemble&nbsp;Modeling</span>
-                            </li>
-                            <li data-que="4" class=" wow fadeInDown" data-wow-offset="100" data-wow-delay=".45s">
-                                <i class="icon-linegraph">
+								</i>
+								<span data-active="Predictive&nbsp;Modeling"> Predictive&nbsp;Modeling</span>
+							</li>
+							<li data-que="4" class=" wow fadeInDown" data-wow-offset="100" data-wow-delay=".45s">
+								<i class="icon-linegraph">
                                 <i class="icon-linegraph icon-shade"></i>
-                                </i>
-                                <span data-active="Visual&nbsp;Analytics"> Visual&nbsp;Analytics</span>
-                            </li>
-                        </ul>
-                        <!--/ End process headers -->
-                        <!-- process bar -->
-                        <div class="line-process-parent">
-                            <div class="line-process"></div>
-                        </div>
-                        <!--/ End process bar -->
-                    </div>
-                </div>
-                <!-- /.container -->
-                <!-- process contents -->
-                <div id="process" class="process owl-carousel container">
-                    <!-- process item -->
-                    <div class="process-item section-text row container">
-                        <div class="col-xs-12 col-sm-6">
-                            <p>Feature importance rankings are useful in determining the contribution of each variable in regression models, and may further assist feature selection.</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <p>Relevant functions:<br>
-                                <code>enpls.fs</code>, <code>enspls.fs</code>
-                            </p>
-                        </div>
-                    </div>
-                    <!--/ End process item -->
-                    <!-- process item -->
-                    <div class="process-item section-text row container">
-                        <div class="col-xs-12 col-sm-6">
-                            <p>The ability of detecting and removing outliers before the actual modeling may help improve the regression model's predictive performance.</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <p>Relevant functions:<br>
-                                <code>enpls.od</code>, <code>enspls.od</code>
-                            </p>
-                        </div>
-                    </div>
-                    <!--/ End process item -->
-                    <!-- process item -->
-                    <div class="process-item section-text row container">
-                        <div class="col-xs-12 col-sm-6">
-                            <p>Ensemble modeling based on partial least squares regressions could help you build a more robust predictive model with a smaller generalization error.</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <p>Relevant functions:<br>
-                                <code>enpls.fit</code>,
-                                <code>enspls.fit</code>,
-                                <code>cv.enpls</code>,
-                                <code>cv.enspls</code>
-                            </p>
-                        </div>
-                    </div>
-                    <!--/ End process item -->
-                    <!-- process item -->
-                    <div class="process-item section-text row container">
-                        <div class="col-xs-12 col-sm-6">
-                            <p>Visualization of the feature importance measurements, detected outliers, and cross-validation results are supported in enpls.</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <p>Relevant functions:<br>
-                                <code>plot.enpls.fs</code>,
-                                <code>plot.enspls.fs</code>,
-                                <code>plot.enpls.od</code>,
-                                <code>plot.enspls.od</code>,
-                                <code>plot.cv.enpls</code>,
-                                <code>plot.cv.enspls</code>
-                            </p>
-                        </div>
-                    </div>
-                    <!--/ End process item -->
-                </div>
-                <!--/ End process contents -->
-            </section>
-            <!--/ End Process Section -->
+								</i>
+								<span data-active="Visual&nbsp;Analytics"> Visual&nbsp;Analytics</span>
+							</li>
+						</ul>
+						<!--/ End process headers -->
+						<!-- process bar -->
+						<div class="line-process-parent">
+							<div class="line-process"></div>
+						</div>
+						<!--/ End process bar -->
+					</div>
+				</div>
+				<!-- /.container -->
+				<!-- process contents -->
+				<div id="process" class="process owl-carousel container">
+					<!-- process item -->
+					<div class="process-item section-text row container">
+						<div class="col-xs-12 col-sm-6">
+							<p>Feature importance rankings are useful in determining the contribution of each variable in regression models, and
+								may further assist feature selection.</p>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<p>Relevant functions:<br>
+								<code>enpls.fs</code>, <code>enspls.fs</code>
+							</p>
+						</div>
+					</div>
+					<!--/ End process item -->
+					<!-- process item -->
+					<div class="process-item section-text row container">
+						<div class="col-xs-12 col-sm-6">
+							<p>The ability of detecting and removing outliers before the actual modeling may help improve the regression model's
+								predictive performance.</p>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<p>Relevant functions:<br>
+								<code>enpls.od</code>, <code>enspls.od</code>
+							</p>
+						</div>
+					</div>
+					<!--/ End process item -->
+					<!-- process item -->
+					<div class="process-item section-text row container">
+						<div class="col-xs-12 col-sm-6">
+							<p>Ensemble modeling based on partial least squares regressions could help you build a more robust predictive model with
+								a smaller generalization error. The model applicability domain evaluation methods also help you measure the applicability
+								of the PLS/SPLS models on external test sets.</p>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<p>Relevant functions:<br>
+								<code>enpls.fit</code>,
+								<code>enspls.fit</code>,
+								<code>cv.enpls</code>,
+								<code>cv.enspls</code>,
+								<code>enpls.ad</code>,
+								<code>enspls.ad</code>
+							</p>
+						</div>
+					</div>
+					<!--/ End process item -->
+					<!-- process item -->
+					<div class="process-item section-text row container">
+						<div class="col-xs-12 col-sm-6">
+							<p>Visualization of the feature importance measurements, detected outliers, and cross-validation results are supported
+								in enpls.</p>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<p>Relevant functions:<br>
+								<code>plot.enpls.fs</code>,
+								<code>plot.enspls.fs</code>,
+								<code>plot.enpls.od</code>,
+								<code>plot.enspls.od</code>,
+								<code>plot.enpls.ad</code>,
+								<code>plot.enspls.ad</code>,
+								<code>plot.cv.enpls</code>,
+								<code>plot.cv.enspls</code>
+							</p>
+						</div>
+					</div>
+					<!--/ End process item -->
+				</div>
+				<!--/ End process contents -->
+			</section>
+			<!--/ End Process Section -->
 
-            <hr />
+			<hr />
 
-            <section id="fs-section" class="container section">
+			<section id="fs-section" class="container section">
 
-                <div id="workCopy">
+				<div id="workCopy">
 
-                    <div class="section-title text-left padding-bottom-50">
-                        <div>
-                            <h2 class="section-title-heading"><span>Measuring Feature Importance</span></h2>
-                        </div>
-                    </div>
+					<div class="section-title text-left padding-bottom-50">
+						<div>
+							<h2 class="section-title-heading"><span>Measuring Feature Importance</span></h2>
+						</div>
+					</div>
 
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <p class="workDesc">
-                                The feature importance ranking established in enpls are based on the average estimated effect size of variables and the variance of coefficients. The ranking serves as an informative measurement for the contribution of each variable in the (sparse) PLS
-                                model.
-                            </p>
-                            <p class="workDesc">
-                                In enpls, the function <code>enpls.fs()</code> computes the feature importance ranking based on ensemble PLS regressions while <code>enspls.fs()</code> gives a similar ranking based on ensemble sparse PLS regressions.
-                                <br><br><br>
-                            </p>
-                        </div>
-                    </div>
+					<div class="row">
+						<div class="col-sm-12">
+							<p class="workDesc">
+								The feature importance ranking established in enpls are based on the average estimated effect size of variables and the variance
+								of coefficients. The ranking serves as an informative measurement for the contribution of each variable in the (sparse)
+								PLS model.
+							</p>
+							<p class="workDesc">
+								In enpls, the function <code>enpls.fs()</code> computes the feature importance ranking based on ensemble PLS regressions
+								while <code>enspls.fs()</code> gives a similar ranking based on ensemble sparse PLS regressions.
+								<br><br><br>
+							</p>
+						</div>
+					</div>
 
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
-                                <li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
-                                    <div class="portfolio-item-img">
-                                        <img src="img/enpls.fs.png" alt="nomogram" />
-                                    </div>
-                                    <div class="portfolio-item-info font-second">
-                                        <h3 class="portfolio-item-title">Feature Importance Scores</h3>
-                                        <div class="portfolio-item-detail">
-                                            <p>Click the icon to zoom in</p>
-                                            <!-- LightBox Button -->
-                                            <a href="img/enpls.fs.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
-                                            <!--/ End LightBox Button -->
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+					<div class="row">
+						<div class="col-sm-6">
+							<ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
+								<li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
+									<div class="portfolio-item-img">
+										<img src="img/enpls.fs.png" alt="feature-importance-dotplot" />
+									</div>
+									<div class="portfolio-item-info font-second">
+										<h3 class="portfolio-item-title">Feature Importance Scores</h3>
+										<div class="portfolio-item-detail">
+											<p>Click the icon to zoom in</p>
+											<!-- LightBox Button -->
+											<a href="img/enpls.fs.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
+											<!--/ End LightBox Button -->
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 
-                        <div class="col-sm-6">
-                            <ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
-                                <li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
-                                    <div class="portfolio-item-img">
-                                        <img src="img/enpls.fs.boxplot.png" alt="nomogram" />
-                                    </div>
-                                    <div class="portfolio-item-info font-second">
-                                        <h3 class="portfolio-item-title">Coefficients Boxplot</h3>
-                                        <div class="portfolio-item-detail">
-                                            <p>Click the icon to zoom in</p>
-                                            <!-- LightBox Button -->
-                                            <a href="img/enpls.fs.boxplot.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
-                                            <!--/ End LightBox Button -->
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+						<div class="col-sm-6">
+							<ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
+								<li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
+									<div class="portfolio-item-img">
+										<img src="img/enpls.fs.boxplot.png" alt="feature-importance-boxplot" />
+									</div>
+									<div class="portfolio-item-info font-second">
+										<h3 class="portfolio-item-title">Coefficients Boxplot</h3>
+										<div class="portfolio-item-detail">
+											<p>Click the icon to zoom in</p>
+											<!-- LightBox Button -->
+											<a href="img/enpls.fs.boxplot.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
+											<!--/ End LightBox Button -->
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 
-                    </div>
+					</div>
 
-                    <div>
-                        <p><br><br><br></p>
-                    </div>
+					<div>
+						<p><br><br><br></p>
+					</div>
 
-                    <div>
-                        <h3 class="section-title-heading"><span>R functions & key options</span></h3>
-                    </div>
+					<div>
+						<h3 class="section-title-heading"><span>R functions & key options</span></h3>
+					</div>
 
-                    <div class="row">
-                        <div class="work-category-title col-md-12">
-                            <h4>
-                                <p style="text-transform:lowercase">enpls.fs()</p>
-                            </h4>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> maxcomp</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Maximum number of components included within each model. If not specified, will use the number of variables.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> reptimes</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> method</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> ratio</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
-                        </div>
-                    </div>
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">enpls.fs()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> maxcomp</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Maximum number of components included within each model. If not specified, will use the number of variables.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> reptimes</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> method</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ratio</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
+						</div>
+					</div>
 
-                    <p></p>
+					<p></p>
 
-                    <div class="row">
-                        <div class="work-category-title col-md-12">
-                            <h4>
-                                <p style="text-transform:lowercase">enspls.fs()</p>
-                            </h4>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> maxcomp</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Maximum number of components included within each model. If not specified, will use 5 by default.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> alpha</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Parameter (grid) controlling sparsity of the model. If not specified, default is <code>seq(0.2, 0.8, 0.2)</code>.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> reptimes</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> method</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> ratio</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
-                        </div>
-                    </div>
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">enspls.fs()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> maxcomp</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Maximum number of components included within each model. If not specified, will use 5 by default.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> alpha</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Parameter (grid) controlling sparsity of the model. If not specified, default is <code>seq(0.2, 0.8, 0.2)</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> reptimes</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> method</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ratio</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
+						</div>
+					</div>
 
-                </div>
-            </section>
-            <hr />
+				</div>
+			</section>
+			<hr />
 
 
-            <section id="od-section" class="container section">
-                <div id="workCopy">
-                    <div class="section-title text-left padding-bottom-50">
-                        <div>
-                            <h2 class="section-title-heading"><span>Outlier Detection</span></h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p class="workDesc">
-                                <br><br><br><br> When some samples in the dataset are selected as the out-of-bag samples in the base PLS models, the mean and variance of the prediction errors on each individual sample could reflect the fact if the sample
-                                is a potential outlier.</p>
-                            <p class="workDesc">
-                                The functions <code>enpls.od()</code> and <code>enspls.od()</code> in enpls detect outliers based on the above idea.
-                            </p>
-                        </div>
+			<section id="od-section" class="container section">
+				<div id="workCopy">
+					<div class="section-title text-left padding-bottom-50">
+						<div>
+							<h2 class="section-title-heading"><span>Outlier Detection</span></h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<p class="workDesc">
+								<br><br><br><br> When some samples in the dataset are selected as the out-of-bag samples in the base PLS models,
+								the mean and variance of the prediction errors on each individual sample could reflect the fact if the sample is
+								a potential outlier.</p>
+							<p class="workDesc">
+								The functions <code>enpls.od()</code> and <code>enspls.od()</code> in enpls detect outliers based on the above idea.
+							</p>
+						</div>
 
-                        <div class="col-sm-0">
-                        </div>
+						<div class="col-sm-0">
+						</div>
 
-                        <div class="col-sm-6">
-                            <ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
-                                <li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
-                                    <div class="portfolio-item-img">
-                                        <img src="img/enpls.od.png" alt="validation" />
-                                    </div>
-                                    <div class="portfolio-item-info font-second">
-                                        <h3 class="portfolio-item-title">Outlier detection plot</h3>
-                                        <div class="portfolio-item-detail">
-                                            <p>Click the icon to zoom in</p>
-                                            <!-- LightBox Button -->
-                                            <a href="img/enpls.od.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
-                                            <!--/ End LightBox Button -->
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+						<div class="col-sm-6">
+							<ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
+								<li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
+									<div class="portfolio-item-img">
+										<img src="img/enpls.od.png" alt="outlier-detection" />
+									</div>
+									<div class="portfolio-item-info font-second">
+										<h3 class="portfolio-item-title">Outlier detection plot</h3>
+										<div class="portfolio-item-detail">
+											<p>Click the icon to zoom in</p>
+											<!-- LightBox Button -->
+											<a href="img/enpls.od.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
+											<!--/ End LightBox Button -->
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 
-                    </div>
+					</div>
 
-                    <div>
-                        <h3 class="section-title-heading"><span>R functions & key options</span></h3>
-                    </div>
+					<div>
+						<h3 class="section-title-heading"><span>R functions & key options</span></h3>
+					</div>
 
-                    <div class="row">
-                        <div class="work-category-title col-md-12">
-                            <h4>
-                                <p style="text-transform:lowercase">enpls.od()</p>
-                            </h4>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> maxcomp</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Maximum number of components included within each model. If not specified, will use the number of variables.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> reptimes</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> method</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> ratio</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
-                        </div>
-                    </div>
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">enpls.od()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> maxcomp</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Maximum number of components included within each model. If not specified, will use the number of variables.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> reptimes</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> method</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ratio</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
+						</div>
+					</div>
 
-                    <p></p>
+					<p></p>
 
-                    <div class="row">
-                        <div class="work-category-title col-md-12">
-                            <h4>
-                                <p style="text-transform:lowercase">enspls.od()</p>
-                            </h4>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> maxcomp</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Maximum number of components included within each model. If not specified, will use 5 by default.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> alpha</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Parameter (grid) controlling sparsity of the model. If not specified, default is <code>seq(0.2, 0.8, 0.2)</code>.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> reptimes</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> method</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> ratio</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
-                        </div>
-                    </div>
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">enspls.od()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> maxcomp</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Maximum number of components included within each model. If not specified, will use 5 by default.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> alpha</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Parameter (grid) controlling sparsity of the model. If not specified, default is <code>seq(0.2, 0.8, 0.2)</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> reptimes</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> method</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ratio</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
+						</div>
+					</div>
 
-                </div>
-            </section>
-            <hr />
+				</div>
+			</section>
+			<hr />
 
-            <section id="modeling-section" class="container section">
-                <div id="workCopy">
-                    <div class="section-title text-left padding-bottom-50">
-                        <div>
-                            <h2 class="section-title-heading"><span>Fitting Ensemble (Sparse) PLS Models</span></h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p class="workDesc">
-                                <br><br><br><br> The (sparse) partial least squares regression model is used as the base learner in enpls. We build many different models with bootstrapped or Monte-Carlo resampled training sets. The models are then aggregated
-                                to establish an ensemble (S)PLS model.
-                            </p>
-                            <p class="workDesc">
-                                The functions <code>enpls.fit()</code> and <code>enspls.fit()</code> support fitting the ensemble models; <code>cv.enpls()</code> and <code>cv.enspls()</code> support cross-validation on such ensemble models.
-                            </p>
-                        </div>
+			<section id="appdomain-section" class="container section">
+				<div id="workCopy">
+					<div class="section-title text-left padding-bottom-50">
+						<div>
+							<h2 class="section-title-heading"><span>Applicability Domain Evaluation</span></h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<p class="workDesc">
+								<br><br><br><br> Model applicability domain measures how well the PLS/SPLS model built on the training set performs
+								on external test sets. In enpls, after a certain perturbation was applied to the variables or samples of the training
+								set, the error distribution derived from the predictions of all sub-models could characterize this domain.</p>
+							<p class="workDesc">
+								The functions <code>enpls.ad()</code> and <code>enspls.ad()</code> in enpls could evaluate the model applicability
+								domain.
+							</p>
+						</div>
 
-                        <div class="col-sm-0">
-                        </div>
+						<div class="col-sm-0">
+						</div>
 
-                        <div class="col-sm-6">
-                            <ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
-                                <li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
-                                    <div class="portfolio-item-img">
-                                        <img src="img/enpls.fit.png" alt="calibration" />
-                                    </div>
-                                    <div class="portfolio-item-info font-second">
-                                        <h3 class="portfolio-item-title">Ensemble model prediction</h3>
-                                        <div class="portfolio-item-detail">
-                                            <p>Click the icon to zoom in</p>
-                                            <!-- LightBox Button -->
-                                            <a href="img/enpls.fit.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
-                                            <!--/ End LightBox Button -->
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+						<div class="col-sm-6">
+							<ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
+								<li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
+									<div class="portfolio-item-img">
+										<img src="img/enpls.ad.png" alt="outlier-detection" />
+									</div>
+									<div class="portfolio-item-info font-second">
+										<h3 class="portfolio-item-title">Model applicability domain evaluation plot</h3>
+										<div class="portfolio-item-detail">
+											<p>Click the icon to zoom in</p>
+											<!-- LightBox Button -->
+											<a href="img/enpls.ad.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
+											<!--/ End LightBox Button -->
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 
-                    </div>
+					</div>
 
-                    <div>
-                        <h3 class="section-title-heading"><span>R functions & key options</span></h3>
-                    </div>
+					<div>
+						<h3 class="section-title-heading"><span>R functions & key options</span></h3>
+					</div>
 
-                    <div class="row">
-                        <div class="work-category-title col-md-12">
-                            <h4>
-                                <p style="text-transform:lowercase">enpls.fit() / enspls.fit()</p>
-                            </h4>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> maxcomp</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Maximum number of components included within each model.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> alpha</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Parameter (grid) controlling sparsity of the model (only available in <code>enspls.fit()</code>).</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> reptimes</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> method</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> ratio</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
-                        </div>
-                    </div>
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">enpls.ad()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> maxcomp</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Maximum number of components included within each model. If not specified, will use the number of variables.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> reptimes</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> space</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Space in which to apply the resampling method. Can be the sample space (<code>"sample"</code>) or the variable space
+								(
+								<code>"variable"</code>).</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> method</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ratio</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
+						</div>
+					</div>
 
-                    <p></p>
+					<p></p>
 
-                    <div class="row">
-                        <div class="work-category-title col-md-12">
-                            <h4>
-                                <p style="text-transform:lowercase">cv.enpls() / cv.enspls()</p>
-                            </h4>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> nfolds</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Number of cross-validation folds.</div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="category-item"> ...</div>
-                        </div>
-                        <div class="col-md-10 col-sm-6">
-                            <div class="category-item"> Arguments to be passed to <code>enpls.fit()</code> or <code>enspls.fit()</code>.</div>
-                        </div>
-                    </div>
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">enspls.ad()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> maxcomp</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Maximum number of components included within each model. If not specified, will use 5 by default.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> alpha</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Parameter (grid) controlling sparsity of the model. If not specified, default is <code>seq(0.2, 0.8, 0.2)</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> reptimes</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> space</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Space in which to apply the resampling method. Can be the sample space (<code>"sample"</code>) or the variable space
+								(
+								<code>"variable"</code>).</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> method</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ratio</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
+						</div>
+					</div>
 
-                </div>
-            </section>
-            <hr />
+				</div>
+			</section>
+			<hr />
 
-            <!-- About Section -->
-            <section id="about-section" class="about-section section">
-                <div class="container">
-                    <div class="section-title">
-                        <div>
-                            <h2 class="section-title-heading">about <span style="text-transform:lowercase">enpls</span></h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 wow fadeInUp margin-bottom-xs-40">
-                            <blockquote class=" about-quote wow fadeInUp" data-wow-delay="0s">
-                                <p>The idea of ensemble learning is not only effective in improving the predictive performance of certain statistical and machine learning models, but also useful for model diagnostic purposes. In the light of this, we built
-                                    the enpls package, which offers a framework for measuring feature importance, outlier detection, and ensemble modeling with (sparse) partial least squares regressions.</p>
-                                <p>If you have any questions, suggestions, or ideas about the package, please feel free to <a href="http://nanx.me">let me know</a> via email or <a href="https://github.com/road2stat/enpls/issues">create an issue</a> on GitHub.
-                                </p>
-                            </blockquote>
-                        </div>
-                        <!--/.col -->
-                    </div>
-                    <!--/.row -->
-                </div>
-                <!--/.container -->
-            </section>
-            <!--/ End About Section -->
-            <hr />
+			<section id="modeling-section" class="container section">
+				<div id="workCopy">
+					<div class="section-title text-left padding-bottom-50">
+						<div>
+							<h2 class="section-title-heading"><span>Fitting Ensemble (Sparse) PLS Models</span></h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<p class="workDesc">
+								<br><br><br><br> The (sparse) partial least squares regression model is used as the base learner in enpls. We build
+								many different models with bootstrapped or Monte-Carlo resampled training sets. The models are then aggregated to
+								establish an ensemble (S)PLS model.
+							</p>
+							<p class="workDesc">
+								The functions <code>enpls.fit()</code> and <code>enspls.fit()</code> support fitting the ensemble models; <code>cv.enpls()</code>								and <code>cv.enspls()</code> support cross-validation on such ensemble models.
+							</p>
+						</div>
 
-            <!-- Footer Section -->
-            <footer class="footer-section section no-padding-bottom">
-                <!-- go top pop-up -->
-                <div id="go-top" class="go-top go-top-out in-page-scroll">
-                    <div class="circle1"></div>
-                    <a href="#top" class="square"><span></span></a>
-                    <div class="rectangle"></div>
-                    <div class="circle2"></div>
-                </div>
-                <!--/ End go top pop-up -->
-                <div class="footer-bottom">
-                    <!-- Copyright -->
-                    <p class="footer-bottom-text font-second">© 2014 - 2016 · The enpls Project</p>
-                    <!-- End Copyright -->
-                </div>
-            </footer>
-            <!--/ End Footer Section -->
-        </div>
-        <!--/ #page-2 -->
-    </div>
-    <!--/ #page -->
+						<div class="col-sm-0">
+						</div>
 
-    <!-- JS Scripts -->
+						<div class="col-sm-6">
+							<ul class="portfolio-container no-margin-bottom list-unstyled row portfolio-hover-effect">
+								<li class="portfolio-item photo video col-sm-12 col-md-12 col-xs-12">
+									<div class="portfolio-item-img">
+										<img src="img/enpls.fit.png" alt="enpls-fit" />
+									</div>
+									<div class="portfolio-item-info font-second">
+										<h3 class="portfolio-item-title">Ensemble model prediction</h3>
+										<div class="portfolio-item-detail">
+											<p>Click the icon to zoom in</p>
+											<!-- LightBox Button -->
+											<a href="img/enpls.fit.png" class="icon-magnifying-glass lightbox" data-lightbox-gallery="gallery1"></a>
+											<!--/ End LightBox Button -->
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 
-    <script>
+					</div>
+
+					<div>
+						<h3 class="section-title-heading"><span>R functions & key options</span></h3>
+					</div>
+
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">enpls.fit() / enspls.fit()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> maxcomp</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Maximum number of components included within each model.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> alpha</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Parameter (grid) controlling sparsity of the model (only available in <code>enspls.fit()</code>).</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> reptimes</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of models to build with Monte-Carlo resampling or bootstrapping.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> method</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Resampling method. <code>"mc"</code> (Monte-Carlo resampling) or <code>"boot"</code> (bootstrapping). Default is <code>"mc"</code>.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ratio</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Sampling ratio used when <code>method = "mc"</code>.</div>
+						</div>
+					</div>
+
+					<p></p>
+
+					<div class="row">
+						<div class="work-category-title col-md-12">
+							<h4>
+								<p style="text-transform:lowercase">cv.enpls() / cv.enspls()</p>
+							</h4>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> nfolds</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Number of cross-validation folds.</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="category-item"> ...</div>
+						</div>
+						<div class="col-md-10 col-sm-6">
+							<div class="category-item"> Arguments to be passed to <code>enpls.fit()</code> or <code>enspls.fit()</code>.</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<hr />
+
+			<!-- About Section -->
+			<section id="about-section" class="about-section section">
+				<div class="container">
+					<div class="section-title">
+						<div>
+							<h2 class="section-title-heading">about <span style="text-transform:lowercase">enpls</span></h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 wow fadeInUp margin-bottom-xs-40">
+							<blockquote class=" about-quote wow fadeInUp" data-wow-delay="0s">
+								<p>The idea of ensemble learning is not only effective in improving the predictive performance of certain statistical
+									and machine learning models, but also useful for model diagnostic purposes. In the light of this, we built the enpls
+									package, which offers a framework for measuring feature importance, outlier detection, and ensemble modeling with
+									(sparse) partial least squares regressions.</p>
+								<p>If you have any questions, suggestions, or ideas about the package, please feel free to <a href="http://nanx.me">let me know</a>									via email or <a href="https://github.com/road2stat/enpls/issues">create an issue</a> on GitHub.
+								</p>
+							</blockquote>
+						</div>
+						<!--/.col -->
+					</div>
+					<!--/.row -->
+				</div>
+				<!--/.container -->
+			</section>
+			<!--/ End About Section -->
+			<hr />
+
+			<!-- Footer Section -->
+			<footer class="footer-section section no-padding-bottom">
+				<!-- go top pop-up -->
+				<div id="go-top" class="go-top go-top-out in-page-scroll">
+					<div class="circle1"></div>
+					<a href="#top" class="square"><span></span></a>
+					<div class="rectangle"></div>
+					<div class="circle2"></div>
+				</div>
+				<!--/ End go top pop-up -->
+				<div class="footer-bottom">
+					<!-- Copyright -->
+					<p class="footer-bottom-text font-second">© 2014 - 2016 · The enpls Project</p>
+					<!-- End Copyright -->
+				</div>
+			</footer>
+			<!--/ End Footer Section -->
+		</div>
+		<!--/ #page-2 -->
+	</div>
+	<!--/ #page -->
+
+	<!-- JS Scripts -->
+
+	<script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function() {
@@ -703,24 +866,24 @@
         ga('send', 'pageview');
     </script>
 
-    <script src="js/modernizr.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/jquery.animsition.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/animateSlider.js"></script>
-    <script src="js/animated-headlines.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-    <script src="js/nivo-lightbox.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <!--/ End JS Scripts -->
+	<script src="js/modernizr.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jquery.animsition.min.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/animateSlider.js"></script>
+	<script src="js/animated-headlines.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+	<script src="js/nivo-lightbox.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<!--/ End JS Scripts -->
 </body>
 
 </html>
