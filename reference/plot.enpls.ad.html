@@ -116,16 +116,19 @@ evaluation with ensemble partial least squares regressions.</p>
 <span class='no'>y.tr</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>1</span>:<span class='fl'>100</span>]
 
 <span class='co'># two test sets</span>
-<span class='no'>x.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>101</span>:<span class='fl'>150</span>, ],
-            <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>151</span>:<span class='fl'>207</span>, ])
-<span class='no'>y.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>101</span>:<span class='fl'>150</span>],
-            <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>151</span>:<span class='fl'>207</span>])
+<span class='no'>x.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(
+  <span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>101</span>:<span class='fl'>150</span>, ],
+  <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>151</span>:<span class='fl'>207</span>, ])
+<span class='no'>y.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(
+  <span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>101</span>:<span class='fl'>150</span>],
+  <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>151</span>:<span class='fl'>207</span>])
 
 <span class='fu'>set.seed</span>(<span class='fl'>42</span>)
-<span class='no'>ad</span> <span class='kw'>=</span> <span class='fu'><a href='enpls.ad.html'>enpls.ad</a></span>(<span class='no'>x.tr</span>, <span class='no'>y.tr</span>, <span class='no'>x.te</span>, <span class='no'>y.te</span>,
-              <span class='kw'>space</span> <span class='kw'>=</span> <span class='st'>"variable"</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"mc"</span>,
-              <span class='kw'>ratio</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>50</span>)
-<span class='fu'>plot</span>(<span class='no'>ad</span>)</div><img src='plot.enpls.ad-2.png' alt='' width='540' height='400' /><div class='input'><span class='co'># The interactive plot requires a HTML viewer</span>
+<span class='no'>ad</span> <span class='kw'>=</span> <span class='fu'><a href='enpls.ad.html'>enpls.ad</a></span>(
+  <span class='no'>x.tr</span>, <span class='no'>y.tr</span>, <span class='no'>x.te</span>, <span class='no'>y.te</span>,
+  <span class='kw'>space</span> <span class='kw'>=</span> <span class='st'>"variable"</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"mc"</span>,
+  <span class='kw'>ratio</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>50</span>)
+<span class='fu'>plot</span>(<span class='no'>ad</span>)</div><img src='plot.enpls.ad-2.png' alt='' width='540' height='400' /><div class='input'><span class='co'># the interactive plot requires a HTML viewer</span>
 <span class='co'>## Not run: ------------------------------------</span>
 <span class='co'># plot(ad, type = "interactive")</span>
 <span class='co'>## ---------------------------------------------</span></div></pre>

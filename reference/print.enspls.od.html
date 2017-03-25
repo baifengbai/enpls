@@ -107,8 +107,9 @@ ensemble sparse partial least squares regressions.</p>
 <span class='no'>y</span> <span class='kw'>=</span> <span class='no'>logd1k</span>$<span class='no'>y</span>
 
 <span class='fu'>set.seed</span>(<span class='fl'>42</span>)
-<span class='no'>od</span> <span class='kw'>=</span> <span class='fu'><a href='enspls.od.html'>enspls.od</a></span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>maxcomp</span> <span class='kw'>=</span> <span class='fl'>3</span>,
-               <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.3</span>, <span class='fl'>0.6</span>, <span class='fl'>0.9</span>))
+<span class='no'>od</span> <span class='kw'>=</span> <span class='fu'><a href='enspls.od.html'>enspls.od</a></span>(
+  <span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>maxcomp</span> <span class='kw'>=</span> <span class='fl'>3</span>,
+  <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.3</span>, <span class='fl'>0.6</span>, <span class='fl'>0.9</span>))
 <span class='fu'>print</span>(<span class='no'>od</span>)</div><div class='output co'>#&gt; Outlier Detection by Ensemble Sparse Partial Least Squares
 #&gt; ---
 #&gt; Mean residual for each sample:

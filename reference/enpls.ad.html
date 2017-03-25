@@ -171,15 +171,18 @@ will create duplicated variables, and that could cause problems.</p>
 <span class='no'>y.tr</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>1</span>:<span class='fl'>100</span>]
 
 <span class='co'># two test sets</span>
-<span class='no'>x.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>101</span>:<span class='fl'>150</span>, ],
-            <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>151</span>:<span class='fl'>207</span>, ])
-<span class='no'>y.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>101</span>:<span class='fl'>150</span>],
-            <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>151</span>:<span class='fl'>207</span>])
+<span class='no'>x.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(
+  <span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>101</span>:<span class='fl'>150</span>, ],
+  <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>151</span>:<span class='fl'>207</span>, ])
+<span class='no'>y.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(
+  <span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>101</span>:<span class='fl'>150</span>],
+  <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>151</span>:<span class='fl'>207</span>])
 
 <span class='fu'>set.seed</span>(<span class='fl'>42</span>)
-<span class='no'>ad</span> <span class='kw'>=</span> <span class='fu'>enpls.ad</span>(<span class='no'>x.tr</span>, <span class='no'>y.tr</span>, <span class='no'>x.te</span>, <span class='no'>y.te</span>,
-              <span class='kw'>space</span> <span class='kw'>=</span> <span class='st'>"variable"</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"mc"</span>,
-              <span class='kw'>ratio</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>50</span>)
+<span class='no'>ad</span> <span class='kw'>=</span> <span class='fu'>enpls.ad</span>(
+  <span class='no'>x.tr</span>, <span class='no'>y.tr</span>, <span class='no'>x.te</span>, <span class='no'>y.te</span>,
+  <span class='kw'>space</span> <span class='kw'>=</span> <span class='st'>"variable"</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"mc"</span>,
+  <span class='kw'>ratio</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>50</span>)
 <span class='fu'>print</span>(<span class='no'>ad</span>)</div><div class='output co'>#&gt; Model Applicability Domain Evaluation by ENPLS
 #&gt; ---
 #&gt; Absolute mean prediction error for each training set sample:
@@ -269,7 +272,7 @@ will create duplicated variables, and that could cause problems.</p>
 #&gt; [43]   0.3351914   0.3785477   0.7429789   9.4156095   7.9078708   8.5296029
 #&gt; [49]   8.1904502   8.2091738   8.2054809   7.0927898   8.0714083   7.9687650
 #&gt; [55]   8.0388086   8.1221421   7.8760553
-#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>ad</span>)</div><img src='enpls.ad-4.png' alt='' width='540' height='400' /><div class='input'><span class='co'># The interactive plot requires a HTML viewer</span>
+#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>ad</span>)</div><img src='enpls.ad-4.png' alt='' width='540' height='400' /><div class='input'><span class='co'># the interactive plot requires a HTML viewer</span>
 <span class='co'>## Not run: ------------------------------------</span>
 <span class='co'># plot(ad, type = "interactive")</span>
 <span class='co'>## ---------------------------------------------</span></div></pre>

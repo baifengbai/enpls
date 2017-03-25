@@ -177,16 +177,19 @@ will create duplicated variables, and that could cause problems.</p>
 <span class='no'>y.tr</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>1</span>:<span class='fl'>300</span>]
 
 <span class='co'># two test sets</span>
-<span class='no'>x.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>301</span>:<span class='fl'>400</span>, ],
-            <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>401</span>:<span class='fl'>500</span>, ])
-<span class='no'>y.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>301</span>:<span class='fl'>400</span>],
-            <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>401</span>:<span class='fl'>500</span>])
+<span class='no'>x.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(
+  <span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>301</span>:<span class='fl'>400</span>, ],
+  <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>x</span>[<span class='fl'>401</span>:<span class='fl'>500</span>, ])
+<span class='no'>y.te</span> <span class='kw'>=</span> <span class='fu'>list</span>(
+  <span class='st'>"test.1"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>301</span>:<span class='fl'>400</span>],
+  <span class='st'>"test.2"</span> <span class='kw'>=</span> <span class='no'>y</span>[<span class='fl'>401</span>:<span class='fl'>500</span>])
 
 <span class='fu'>set.seed</span>(<span class='fl'>42</span>)
-<span class='no'>ad</span> <span class='kw'>=</span> <span class='fu'>enspls.ad</span>(<span class='no'>x.tr</span>, <span class='no'>y.tr</span>, <span class='no'>x.te</span>, <span class='no'>y.te</span>,
-               <span class='kw'>maxcomp</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.3</span>, <span class='fl'>0.6</span>, <span class='fl'>0.9</span>),
-               <span class='kw'>space</span> <span class='kw'>=</span> <span class='st'>"variable"</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"mc"</span>,
-               <span class='kw'>ratio</span> <span class='kw'>=</span> <span class='fl'>0.8</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>10</span>)
+<span class='no'>ad</span> <span class='kw'>=</span> <span class='fu'>enspls.ad</span>(
+  <span class='no'>x.tr</span>, <span class='no'>y.tr</span>, <span class='no'>x.te</span>, <span class='no'>y.te</span>,
+  <span class='kw'>maxcomp</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.3</span>, <span class='fl'>0.6</span>, <span class='fl'>0.9</span>),
+  <span class='kw'>space</span> <span class='kw'>=</span> <span class='st'>"variable"</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"mc"</span>,
+  <span class='kw'>ratio</span> <span class='kw'>=</span> <span class='fl'>0.8</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>10</span>)
 <span class='fu'>print</span>(<span class='no'>ad</span>)</div><div class='output co'>#&gt; Model Applicability Domain Evaluation by ENSPLS
 #&gt; ---
 #&gt; Absolute mean prediction error for each training set sample:
@@ -377,7 +380,7 @@ will create duplicated variables, and that could cause problems.</p>
 #&gt;  [85] 0.19744893 0.15223891 0.20503921 0.16445457 0.11479305 0.33272982
 #&gt;  [91] 0.28612213 0.26490989 0.23349507 4.56179683 0.17479257 0.26554636
 #&gt;  [97] 0.16348937 5.61984993 0.29782860 0.24028899
-#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>ad</span>)</div><img src='enspls.ad-4.png' alt='' width='540' height='400' /><div class='input'><span class='co'># The interactive plot requires a HTML viewer</span>
+#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>ad</span>)</div><img src='enspls.ad-4.png' alt='' width='540' height='400' /><div class='input'><span class='co'># the interactive plot requires a HTML viewer</span>
 <span class='co'>## Not run: ------------------------------------</span>
 <span class='co'># plot(ad, type = "interactive")</span>
 <span class='co'>## ---------------------------------------------</span></div></pre>
