@@ -25,12 +25,26 @@
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
+<!-- Google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83197262-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
   </head>
 
   <body>
@@ -84,40 +98,46 @@
     <p>K-fold cross validation for ensemble partial least squares regression.</p>
     
 
-    <pre><span class='fu'>cv.enpls</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>nfolds</span> <span class='kw'>=</span> <span class='fl'>5L</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>cv.enpls</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>nfolds</span> <span class='kw'>=</span> <span class='fl'>5L</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <dl class="dl-horizontal">
-      <dt>x</dt>
-      <dd>Predictor matrix.</dd>
-      <dt>y</dt>
-      <dd>Response vector.</dd>
-      <dt>nfolds</dt>
-      <dd>Number of cross-validation folds, default is <code>5</code>.
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>Predictor matrix.</p></td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td><p>Response vector.</p></td>
+    </tr>
+    <tr>
+      <th>nfolds</th>
+      <td><p>Number of cross-validation folds, default is <code>5</code>.
 Note that this is the CV folds for the ensemble PLS model,
 not the individual PLS models. To control the CV folds for
-single PLS models, please use the argument <code>cvfolds</code>.</dd>
-      <dt>verbose</dt>
-      <dd>Shall we print out the progress of cross-validation?</dd>
-      <dt>...</dt>
-      <dd>Arguments to be passed to <code><a href='enpls.fit.html'>enpls.fit</a></code>.</dd>
-    </dl>
+single PLS models, please use the argument <code>cvfolds</code>.</p></td>
+    </tr>
+    <tr>
+      <th>verbose</th>
+      <td><p>Shall we print out the progress of cross-validation?</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Arguments to be passed to <code><a href='enpls.fit.html'>enpls.fit</a></code>.</p></td>
+    </tr>
+    </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list containing:
-<ul>
-<li> <code>ypred</code> - a matrix containing two columns: real y and predicted y
-</li>
-<li> <code>residual</code> - cross validation result (y.pred - y.real)
-</li>
-<li> <code>RMSE</code> - RMSE
-</li>
-<li> <code>MAE</code> - MAE
-</li>
-<li> <code>Rsquare</code> - Rsquare
-</li>
-</ul></p>
+    <p>A list containing:</p><ul>
+<li><p><code>ypred</code> - a matrix containing two columns: real y and predicted y</p></li>
+<li><p><code>residual</code> - cross validation result (y.pred - y.real)</p></li>
+<li><p><code>RMSE</code> - RMSE</p></li>
+<li><p><code>MAE</code> - MAE</p></li>
+<li><p><code>Rsquare</code> - Rsquare</p></li>
+</ul>
+
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
@@ -143,8 +163,8 @@ partial least squares regressions.</p>
 #&gt; Beginning fold 4 
 #&gt; Beginning fold 5 </div><div class='input'><span class='fu'>print</span>(<span class='no'>cvfit</span>)</div><div class='output co'>#&gt; Cross Validation Result for Ensemble Partial Least Squares
 #&gt; ---
-#&gt; RMSE = 3.5102
-#&gt; MAE = 2.456387
+#&gt; RMSE = 3.4921
+#&gt; MAE = 2.454559
 #&gt; Rsquare = 0.999964</div><div class='input'><span class='fu'>plot</span>(<span class='no'>cvfit</span>)</div><img src='cv.enpls-6.png' alt='' width='540' height='400' /></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
