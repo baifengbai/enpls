@@ -38,10 +38,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
 </li>
 <li>
-  <a href="../articles/index.html">Articles</a>
+  <a href="../articles/enpls.html">Get Started</a>
+</li>
+<li>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li>
   <a href="../news/index.html">News</a>
@@ -69,7 +75,7 @@
       <h1>A Brief Introduction to enpls</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
             
-            <h4 class="date">2017-04-23</h4>
+            <h4 class="date">2017-08-10</h4>
           </div>
 
     
@@ -147,12 +153,12 @@ fit =<span class="st"> </span><span class="kw"><a href="../reference/enspls.fit.
 y.pred =<span class="st"> </span><span class="kw">predict</span>(fit, <span class="dt">newx =</span> x)
 
 df =<span class="st"> </span><span class="kw">data.frame</span>(y, y.pred)
-<span class="kw">ggplot</span>(df, <span class="kw">aes_string</span>(<span class="dt">x =</span> <span class="st">"y"</span>, <span class="dt">y =</span> <span class="st">"y.pred"</span>)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">slope =</span> <span class="dv">1</span>, <span class="dt">intercept =</span> <span class="dv">0</span>, <span class="dt">colour =</span> <span class="st">"darkgrey"</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">shape =</span> <span class="dv">1</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">ratio =</span> <span class="dv">1</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">"Observed Response"</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ylab</span>(<span class="st">"Predicted Response"</span>)</code></pre></div>
+<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(df, <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes_">aes_string</a></span>(<span class="dt">x =</span> <span class="st">"y"</span>, <span class="dt">y =</span> <span class="st">"y.pred"</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_abline">geom_abline</a></span>(<span class="dt">slope =</span> <span class="dv">1</span>, <span class="dt">intercept =</span> <span class="dv">0</span>, <span class="dt">colour =</span> <span class="st">"darkgrey"</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">shape =</span> <span class="dv">1</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/coord_fixed">coord_fixed</a></span>(<span class="dt">ratio =</span> <span class="dv">1</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Observed Response"</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Predicted Response"</span>)</code></pre></div>
 <p><img src="enpls_files/figure-html/unnamed-chunk-2-1.png" width="600" height="600"></p>
 <p>We used the fitted model to predict on the training data and plotted the predicted values against the true values.</p>
 <p>The parameter <code>ratio</code> decides the sampling ratio for each Monte-Carlo run; <code>maxcomp</code> controls the maximum number of components included within each model; <code>reptimes</code> sets the times of Monte-Carlo resampling, we recommend setting it to a large number (500 by default).</p>
@@ -265,7 +271,8 @@ ad =<span class="st"> </span><span class="kw"><a href="../reference/enspls.ad.ht
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
         <div id="tocnav">
-      <h2>Contents</h2>
+      <h2 class="hasAnchor">
+<a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
 <li><a href="#introduction">Introduction</a></li>
       <li><a href="#model-fitting">Model Fitting</a></li>

@@ -23,7 +23,8 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -63,10 +64,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
 </li>
 <li>
-  <a href="../articles/index.html">Articles</a>
+  <a href="../articles/enpls.html">Get Started</a>
+</li>
+<li>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li>
   <a href="../news/index.html">News</a>
@@ -145,7 +152,7 @@ ensemble partial least squares regressions.</p>
 
 <span class='fu'>set.seed</span>(<span class='fl'>42</span>)
 <span class='no'>fs</span> <span class='kw'>=</span> <span class='fu'><a href='enpls.fs.html'>enpls.fs</a></span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>50</span>)
-<span class='fu'>plot</span>(<span class='no'>fs</span>)</div><img src='plot.enpls.fs-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>plot</span>(<span class='no'>fs</span>, <span class='kw'>nvar</span> <span class='kw'>=</span> <span class='fl'>10</span>)</div><img src='plot.enpls.fs-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>plot</span>(<span class='no'>fs</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"boxplot"</span>)</div><img src='plot.enpls.fs-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>plot</span>(<span class='no'>fs</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"boxplot"</span>, <span class='kw'>limits</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.05</span>, <span class='fl'>0.95</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: Removed 106 rows containing non-finite values (stat_boxplot).</span></div><img src='plot.enpls.fs-9.png' alt='' width='540' height='400' /></pre>
+<span class='fu'>plot</span>(<span class='no'>fs</span>)</div><div class='img'><img src='plot.enpls.fs-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>plot</span>(<span class='no'>fs</span>, <span class='kw'>nvar</span> <span class='kw'>=</span> <span class='fl'>10</span>)</div><div class='img'><img src='plot.enpls.fs-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>plot</span>(<span class='no'>fs</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"boxplot"</span>)</div><div class='img'><img src='plot.enpls.fs-3.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>plot</span>(<span class='no'>fs</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"boxplot"</span>, <span class='kw'>limits</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.05</span>, <span class='fl'>0.95</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: Removed 106 rows containing non-finite values (stat_boxplot).</span></div><div class='img'><img src='plot.enpls.fs-4.png' alt='' width='700' height='432.632880098887' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -159,7 +166,7 @@ ensemble partial least squares regressions.</p>
 
     <h2>Author</h2>
     
-Nan Xiao &lt;<a href = 'https://nanx.me'>https://nanx.me</a>&gt;
+Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;
 
   </div>
 </div>

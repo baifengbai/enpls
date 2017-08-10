@@ -23,7 +23,8 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -63,10 +64,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
 </li>
 <li>
-  <a href="../articles/index.html">Articles</a>
+  <a href="../articles/enpls.html">Get Started</a>
+</li>
+<li>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li>
   <a href="../news/index.html">News</a>
@@ -141,8 +148,8 @@ partial least squares regression models.</p>
 <span class='fu'>set.seed</span>(<span class='fl'>42</span>)
 <span class='no'>fit</span> <span class='kw'>=</span> <span class='fu'><a href='enspls.fit.html'>enspls.fit</a></span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>reptimes</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>maxcomp</span> <span class='kw'>=</span> <span class='fl'>2</span>)
 <span class='no'>y.pred</span> <span class='kw'>=</span> <span class='fu'>predict</span>(<span class='no'>fit</span>, <span class='kw'>newx</span> <span class='kw'>=</span> <span class='no'>x</span>)
-<span class='fu'>plot</span>(<span class='no'>y</span>, <span class='no'>y.pred</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>), <span class='kw'>ylim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>))</div><div class='input'><span class='fu'>abline</span>(<span class='kw'>a</span> <span class='kw'>=</span> <span class='fl'>0L</span>, <span class='kw'>b</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</div><img src='predict.enspls.fit-3.png' alt='' width='540' height='400' /><div class='input'><span class='no'>y.pred.med</span> <span class='kw'>=</span> <span class='fu'>predict</span>(<span class='no'>fit</span>, <span class='kw'>newx</span> <span class='kw'>=</span> <span class='no'>x</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"median"</span>)
-<span class='fu'>plot</span>(<span class='no'>y</span>, <span class='no'>y.pred.med</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>), <span class='kw'>ylim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>))</div><div class='input'><span class='fu'>abline</span>(<span class='kw'>a</span> <span class='kw'>=</span> <span class='fl'>0L</span>, <span class='kw'>b</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</div><img src='predict.enspls.fit-6.png' alt='' width='540' height='400' /></pre>
+<span class='fu'>plot</span>(<span class='no'>y</span>, <span class='no'>y.pred</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>), <span class='kw'>ylim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>))</div><div class='input'><span class='fu'>abline</span>(<span class='kw'>a</span> <span class='kw'>=</span> <span class='fl'>0L</span>, <span class='kw'>b</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</div><div class='img'><img src='predict.enspls.fit-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>y.pred.med</span> <span class='kw'>=</span> <span class='fu'>predict</span>(<span class='no'>fit</span>, <span class='kw'>newx</span> <span class='kw'>=</span> <span class='no'>x</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"median"</span>)
+<span class='fu'>plot</span>(<span class='no'>y</span>, <span class='no'>y.pred.med</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>), <span class='kw'>ylim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>y</span>))</div><div class='input'><span class='fu'>abline</span>(<span class='kw'>a</span> <span class='kw'>=</span> <span class='fl'>0L</span>, <span class='kw'>b</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</div><div class='img'><img src='predict.enspls.fit-2.png' alt='' width='700' height='432.632880098887' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -158,7 +165,7 @@ partial least squares regression models.</p>
 
     <h2>Author</h2>
     
-Nan Xiao &lt;<a href = 'https://nanx.me'>https://nanx.me</a>&gt;
+Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;
 
   </div>
 </div>
