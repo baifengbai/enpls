@@ -75,7 +75,7 @@
       <h1>A Brief Introduction to enpls</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
             
-            <h4 class="date">2017-08-10</h4>
+            <h4 class="date">2017-09-27</h4>
           </div>
 
     
@@ -124,8 +124,7 @@
 </tr>
 </tbody>
 </table>
-<p>Please refer to our paper <span class="citation">(Xiao et al. 2016)</span> for details on the intuition and mathematical details of the ensemble learning approaches used here.</p>
-<p>In the next, we will use the data from <span class="citation">(Wang et al. 2015)</span> to demonstrate the general workflow of <code>enpls</code>. The dataset contains 1,000 compounds, each characterized by 80 molecular descriptors. The response is the octanol/water partition coefficient at pH 7.4 (logD7.4).</p>
+<p>Next, we will use the data from <span class="citation">(Wang et al. 2015)</span> to demonstrate the general workflow of <code>enpls</code>. The dataset contains 1,000 compounds, each characterized by 80 molecular descriptors. The response is the octanol/water partition coefficient at pH 7.4 (logD7.4).</p>
 <p>Let’s load the data and take a look at it:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"enpls"</span>)
 <span class="kw">library</span>(<span class="st">"ggplot2"</span>)
@@ -216,7 +215,7 @@ df =<span class="st"> </span><span class="kw">data.frame</span>(y, y.pred)
 <p><img src="enpls_files/figure-html/unnamed-chunk-5-1.png" width="600" height="600"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(od, <span class="dt">criterion =</span> <span class="st">"sd"</span>, <span class="dt">sdtimes =</span> <span class="dv">2</span>)</code></pre></div>
 <p><img src="enpls_files/figure-html/unnamed-chunk-5-2.png" width="600" height="600"></p>
-<p>The two plots showed that several samples in our dataset might be outlier candidates, based on two different criterions. The samples in each area of the plots represent different types of outliers, as defined in <span class="citation">(Xiao et al. 2016)</span>.</p>
+<p>The two plots showed that several samples in our dataset might be outlier candidates, based on two different criterions. The samples in each area of the plots represent different types of outliers.</p>
 </div>
 <div id="applicability-domain-evaluation" class="section level1">
 <h1 class="hasAnchor">
@@ -249,7 +248,7 @@ ad =<span class="st"> </span><span class="kw"><a href="../reference/enspls.ad.ht
 <h1 class="hasAnchor">
 <a href="#conclusion" class="anchor"></a>Conclusion</h1>
 <p>Ensemble learning approaches are not only powerful for improving base learner’s predictive performance but also capable of accomplishing model diagnostic tasks, such as measuring the importance of features. It would be interesting to see if such ideas could be applied to more relevant topics and further facilitate the predictive modeling tasks.</p>
-<p>If you used <code>enpls</code> in your research, please feel free to cite our paper <span class="citation">(Xiao et al. 2016)</span> in your publications. We will be more than happy to listen to your feedbacks. The enpls project website: <a href="https://enpls.org" class="uri">https://enpls.org</a></p>
+<p>The enpls project website: <a href="https://enpls.org" class="uri">https://enpls.org</a></p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1 class="hasAnchor">
@@ -259,10 +258,7 @@ ad =<span class="st"> </span><span class="kw"><a href="../reference/enspls.ad.ht
 <p>Kaneko, Hiromasa, and Kimito Funatsu. 2014. “Applicability Domain Based on Ensemble Learning in Classification and Regression Analyses.” <em>Journal of Chemical Information and Modeling</em> 54 (9). ACS Publications: 2469–82.</p>
 </div>
 <div id="ref-wang2015silico">
-<p>Wang, Jian-Bing, Dong-Sheng Cao, Min-Feng Zhu, Yong-Huan Yun, Nan Xiao, and Yi-Zeng Liang. 2015. “In Silico Evaluation of logD7. 4 and Comparison with Other Prediction Methods.” <em>Journal of Chemometrics</em> 29 (7). Wiley Online Library: 389–98.</p>
-</div>
-<div id="ref-xiao2016enpls">
-<p>Xiao, Nan, Dong-Sheng Cao, Miao-Zhu Li, and Qing-Song Xu. 2016. “enpls: an R Package for Ensemble Partial Least Squares Regression.” <em>arXiv preprint</em>.</p>
+<p>Wang, Jian-Bing, Dong-Sheng Cao, Min-Feng Zhu, Yong-Huan Yun, Nan Xiao, and Yi-Zeng Liang. 2015. “In Silico Evaluation of logD7.4 and Comparison with Other Prediction Methods.” <em>Journal of Chemometrics</em> 29 (7). Wiley Online Library: 389–98.</p>
 </div>
 </div>
 </div>
@@ -290,7 +286,7 @@ ad =<span class="st"> </span><span class="kw"><a href="../reference/enspls.ad.ht
 
 
       <footer><div class="copyright">
-  <p>Developed by Nan Xiao, Dongsheng Cao, Miaozhu Li, Qingsong Xu.</p>
+  <p>Developed by Nan Xiao, Dong-Sheng Cao, Miao-Zhu Li, Qing-Song Xu.</p>
 </div>
 
 <div class="pkgdown">
